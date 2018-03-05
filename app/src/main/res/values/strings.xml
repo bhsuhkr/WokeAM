@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Woke A.M.</string>
+    <string-array name="ListOfWakeupTasks">
+        <item>Math</item>
+        <item>English</item>
+        <item>Shaking</item>
+        <item>Wakeup Task 1</item>
+        <item>Wakeup Task 2</item>
+        <item>Wakeup Task 3</item>
+        <item>Wakeup Task 4</item>
+    </string-array>
+
+    <string-array name="Difficulty">
+        <item>Easy</item>
+        <item>Normal</item>
+        <item>Hard</item>
+        <item>Challenging</item>
+        <item>Level 5</item>
+
+    </string-array>
+
+
+</resources>
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="settings"
+        >
+        <CheckBoxPreference
+            android:key="autobluetooth"
+            android:title="Auto Bluetooth Connection"
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="autocorrect"
+            android:title="test1"
+            android:summary="test"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="autocase"
+            android:title="test2"
+            android:summary="test"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:title="Wakeup Tasks"
+            android:entries="@array/ListOfWakeupTasks"
+            android:entryValues="@array/ListOfWakeupTasks"
+            android:summary="Choose a wakeup task"
+            />
+
+        <ListPreference
+            android:title="Difficulty"
+            android:entries="@array/Difficulty"
+            android:entryValues="@array/ListOfWakeupTasks"
+            android:summary="Choose the difficulty"
+            />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
