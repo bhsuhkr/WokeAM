@@ -29,7 +29,7 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
                 String userAnswer = editText.getText().toString();
                 if(userAnswer.compareTo(String.valueOf(answer))==0){
                     Toast.makeText(getActivity().getApplicationContext(), "Correct!", Toast.LENGTH_LONG).show();
-                    //After task completed ... 
+                    //After task completed ...
                 }else{
                     Toast.makeText(getActivity().getApplicationContext(), "Wrong!", Toast.LENGTH_LONG).show();
                 }
