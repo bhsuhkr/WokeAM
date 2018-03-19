@@ -14,20 +14,22 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
     private ShakeDetector mShakeDetector;
+    private int count = 0;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_shake_task, container, false);
 
 
         mSensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
-        mAccelerometer = mSensorManager
-                .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mShakeDetector = new ShakeDetector();
         mShakeDetector.setOnShakeListener(new ShakeDetector.OnShakeListener() {
-
             @Override
             public void onShake(int count) {
-
-                Toast.makeText(getActivity(), "shake!", Toast.LENGTH_SHORT).show();
+                count++;
+                if(count >= 15)
+                {
+                    Toast.makeText(getActivity(), "shake!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

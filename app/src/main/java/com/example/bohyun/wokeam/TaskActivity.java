@@ -1,14 +1,11 @@
 package com.example.bohyun.wokeam;
 
-import android.content.Context;
-import android.hardware.Sensor;
-import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.widget.Toast;
+
 
 public class TaskActivity extends AppCompatActivity {
     private Fragment selectedfrg;
@@ -33,10 +30,5 @@ public class TaskActivity extends AppCompatActivity {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.main_container, selectedfrg).commit();
 
-
-
     }
-    
-
-
 }
