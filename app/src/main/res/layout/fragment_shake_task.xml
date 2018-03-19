@@ -6,9 +6,10 @@
     >
 
     <ImageView
-        android:layout_width="272dp"
-        android:layout_height="288dp"
-        android:layout_gravity="center"
-        android:src="@drawable/launcher" />
+        android:id="@+id/shakeImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/shake"
+        android:scaleType="center"/>
 
 </LinearLayout>

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class ShakeFragment extends android.support.v4.app.Fragment  {
@@ -15,6 +16,7 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
     private Sensor mAccelerometer;
     private ShakeDetector mShakeDetector;
     private int count = 0;
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_shake_task, container, false);
 
@@ -26,9 +28,10 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
             @Override
             public void onShake(int count) {
                 count++;
-                if(count >= 15)
+                if(count >= 5)
                 {
-                    Toast.makeText(getActivity(), "shake!", Toast.LENGTH_SHORT).show();
+                    ImageView img = getActivity().findViewById(R.id.shakeImg);
+                    img.setImageResource(R.drawable.wakeup);
                 }
             }
         });
