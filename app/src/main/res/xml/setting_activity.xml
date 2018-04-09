@@ -1,40 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory
-        android:title="settings"
-        >
-        <CheckBoxPreference
-            android:key="autobluetooth"
-            android:title="Auto Bluetooth Connection"
-            android:defaultValue="false" />
 
-        <CheckBoxPreference
-            android:key="autocorrect"
-            android:title="test1"
-            android:summary="test"
-            android:defaultValue="true" />
-
-        <CheckBoxPreference
-            android:key="autocase"
-            android:title="test2"
-            android:summary="test"
-            android:defaultValue="true" />
-
-        <ListPreference
+    <PreferenceCategory android:title="Detail Screens">
+        <PreferenceScreen
+            android:key="detail"
             android:title="Wakeup Tasks"
-            android:entries="@array/ListOfWakeupTasks"
-            android:entryValues="@array/ListOfWakeupTasks"
-            android:summary="Choose a wakeup task"
-            />
+            android:summary="Select wakeup tasks">
+            <ListPreference
+                android:key="math"
+                android:title="Calculation"
+                android:summary="Addition, subtraction, multiplication or division"
+                android:entries="@array/Difficulty"
+                android:entryValues="@array/Difficulty"
+                android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"/>
 
-        <ListPreference
-            android:title="Difficulty"
-            android:entries="@array/Difficulty"
-            android:entryValues="@array/ListOfWakeupTasks"
-            android:summary="Choose the difficulty"
+            <ListPreference
+                android:key="english"
+                android:title="English"
+                android:summary="Fill in the blank"
+                android:entries="@array/Difficulty"
+                android:entryValues="@array/Difficulty"
+                android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"/>
+
+            <ListPreference
+                android:key="simonSays"
+                android:title="Simon Says"
+                android:summary="Memorize patterns"
+                android:entries="@array/Difficulty"
+                android:entryValues="@array/Difficulty"
+                android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"/>
+
+            <ListPreference
+                android:key="sudoku"
+                android:title="Sudoku"
+                android:summary=" "
+                android:entries="@array/Difficulty"
+                android:entryValues="@array/Difficulty"
+                android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"/>
+
+            <ListPreference
+                android:key="magicSquare"
+                android:title="Magic Square"
+                android:summary=" "
+                android:entries="@array/Difficulty"
+                android:entryValues="@array/Difficulty"
+                android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"/>
+
+            <ListPreference
+                android:key="shake"
+                android:title="Shake"
+                android:summary=" "
+                android:entries="@array/Difficulty"
+                android:entryValues="@array/Difficulty"
+                android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"/>
+
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Other Preferences">
+        <CheckBoxPreference
+            android:key="bluetooth"
+            android:title="Bluetooth Auto Connection"
+            android:summary="Check it on, check it off"
             />
 
     </PreferenceCategory>
-
 
 </PreferenceScreen>

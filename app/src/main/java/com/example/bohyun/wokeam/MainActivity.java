@@ -1,11 +1,13 @@
 package com.example.bohyun.wokeam;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -13,13 +15,26 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Set;
+import java.util.UUID;
+
 
 
 public class MainActivity extends Activity {
 
-    BluetoothAdapter bluetoothAdapter = null;
     int bluetooth = 1;
+    String address = null;
+    String name = null;
+    Button i1;
+
+    BluetoothAdapter myBluetooth = null;
+    BluetoothSocket btSocket = null;
+    Set<BluetoothDevice> pairedDevices;
+    static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,24 +43,34 @@ public class MainActivity extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        try{
+            myBluetooth = BluetoothAdapter.getDefaultAdapter();
+            address = myBluetooth.getAddress();
+            pairedDevices = myBluetooth.getBondedDevices();
+            if (pairedDevices.size() > 0) {
+                for (BluetoothDevice bt : pairedDevices) {
+                    if(bt.getAddress().toString().equals("20:18:01:03:66:77")) {
+                        address = bt.getAddress().toString();
+                        name = bt.getName().toString();
+                    }
+                }
+            }
 
+            BluetoothDevice device = myBluetooth.getRemoteDevice(address);
+            btSocket = device.createRfcommSocketToServiceRecord(myUUID);
+            btSocket.connect();
 
+            i1=(Button)findViewById(R.id.btn_bluetooth);
 
+            i1.setOnClickListener(new View.OnClickListener()
+            { @Override
+            public void onClick(View v){
+                led_on_off("1");
+                led_on_off("0");}
+            });} catch(Exception e) {
+            Toast.makeText(this, "On create exception", Toast.LENGTH_SHORT).show();
+        }
 
-//        final Button bluetoothButton = (Button) findViewById(R.id.btn_bluetooth);
-//        bluetoothButton.setOnClickListener( new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                buttonEffect(bluetoothButton);
-//                if(bluetoothAdapter == null){
-//                    Toast.makeText(getApplicationContext(), "not connected", Toast.LENGTH_SHORT).show();
-//                }else if(!bluetoothAdapter.isEnabled()){
-//                    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-//                    startActivityForResult(enableBtIntent, bluetooth);
-//                }
-//            }
-//        });
 
         final Button settingButton = (Button) findViewById(R.id.btn_settings);
         settingButton.setOnClickListener( new View.OnClickListener() {
@@ -106,6 +131,23 @@ public class MainActivity extends Activity {
                 return false;
             }
         });
+
     }
 
+    private void led_on_off(String i)
+    {
+        try
+        {
+            if(btSocket!=null)
+            {
+                OutputStream outputstream = btSocket.getOutputStream();
+                outputstream.write(i.getBytes());
+            }
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(getApplicationContext(),e.getMessage(), Toast.LENGTH_SHORT).show();
+
+        }
+    }
 }
