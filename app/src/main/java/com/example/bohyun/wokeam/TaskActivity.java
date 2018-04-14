@@ -10,7 +10,12 @@ import android.support.v4.app.FragmentTransaction;
 public class TaskActivity extends AppCompatActivity {
     private Fragment selectedfrg;
     private Fragment mathTaskFrg;
+    private Fragment engTaskFrg;
+    private Fragment simonSaysTaskFrg;
+    private Fragment sudokuTaskFrg;
+    private Fragment magicSquareTaskFrg;
     private Fragment shakeTaskFrg;
+
     private FragmentManager fragmentManager;
 
     public int[] tasks = new int[] {0, 0, 0, 0, 0, 0};
@@ -20,10 +25,10 @@ public class TaskActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task);
 
-        mathTaskFrg = new MathTaskFragment();
         shakeTaskFrg = new ShakeFragment();
+        mathTaskFrg = new MathTaskFragment();
+
         selectedfrg = mathTaskFrg;
-        selectedfrg = shakeTaskFrg;
 
         //Daily View || Start View
         fragmentManager = getSupportFragmentManager();

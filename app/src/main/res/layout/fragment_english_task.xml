@@ -18,36 +18,43 @@
             android:paddingBottom="20dp"
             android:text="This is the question"/>
 
-        <Button
-            android:id="@+id/answer1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Answer1"/>
-        <Button
-            android:id="@+id/answer2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Answer2"/>
-        <Button
-            android:id="@+id/answer3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Answer3"/>
-        <Button
-            android:id="@+id/answer4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Answer4"/>
-        <Button
-            android:id="@+id/answer5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Answer5"/>
+
+            <Button
+                android:id="@+id/answer1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="Answer1"
+                android:background="@drawable/background"/>
+            <Button
+                android:id="@+id/answer2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="Answer2"
+                android:background="@drawable/background"/>
+            <Button
+                android:id="@+id/answer3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="Answer3"
+                android:background="@drawable/background"/>
+            <Button
+                android:id="@+id/answer4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="Answer4"
+                android:background="@drawable/background"/>
+            <Button
+                android:id="@+id/answer5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="Answer5"
+                android:background="@drawable/background"/>
+
     </LinearLayout>
 
 

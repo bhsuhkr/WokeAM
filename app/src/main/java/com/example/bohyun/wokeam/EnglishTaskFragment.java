@@ -1,6 +1,10 @@
 package com.example.bohyun.wokeam;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,28 +57,49 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
             switch (view.getId()) {
                 case R.id.answer1:
                     Button b1 = view.findViewById(R.id.answer1);
-                    if(b1.getText()==answers[diff][n])
+                    if(b1.getText()==answers[diff][n]){
                         Toast.makeText(getActivity(),"Correct!", Toast.LENGTH_SHORT).show();
+                        nextFragment(true);
+                    }else{
+                        nextFragment(false);
+                    }
                     break;
                 case R.id.answer2:
                     Button b2 = view.findViewById(R.id.answer2);
-                    if(b2.getText()==answers[diff][n])
+                    if(b2.getText()==answers[diff][n]){
                         Toast.makeText(getActivity(),"Correct!", Toast.LENGTH_SHORT).show();
+                        nextFragment(true);
+                    }else{
+                        nextFragment(false);
+                    }
                     break;
                 case R.id.answer3:
                     Button b3 = view.findViewById(R.id.answer3);
-                    if(b3.getText()==answers[diff][n])
+                    if(b3.getText()==answers[diff][n]){
                         Toast.makeText(getActivity(),"Correct!", Toast.LENGTH_SHORT).show();
+                        nextFragment(true);
+                    }else{
+                        nextFragment(false);
+                    }
                     break;
                 case R.id.answer4:
                     Button b4 = view.findViewById(R.id.answer4);
-                    if(b4.getText()==answers[diff][n])
+                    if(b4.getText()==answers[diff][n]){
                         Toast.makeText(getActivity(),"Correct!", Toast.LENGTH_SHORT).show();
+                        nextFragment(true);
+                    }else{
+                        nextFragment(false);
+                    }
                     break;
                 case R.id.answer5:
                     Button b5 = view.findViewById(R.id.answer5);
-                    if(b5.getText()==answers[diff][n])
+                    if(b5.getText()==answers[diff][n]){
                         Toast.makeText(getActivity(),"Correct!", Toast.LENGTH_SHORT).show();
+                        nextFragment(true);
+                    }else{
+                        nextFragment(false);
+                    }
+
                     break;
             }
         }
@@ -92,8 +117,6 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
         }else{
 
         }
-
-
     }
 
     public int getDifficulty(int task){
@@ -104,4 +127,17 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
             return 0;
         }
     }
+
+    public void nextFragment(boolean check) {
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        if (check) {
+            Fragment shakeTaskFrg = new ShakeFragment();
+            transaction.replace(R.id.main_container, shakeTaskFrg).commit();
+        }else{ // create new english Fragment
+            Fragment engTaskFrg = new EnglishTaskFragment();
+            transaction.replace(R.id.main_container, engTaskFrg).commit();
+        }
+    }
+
 }

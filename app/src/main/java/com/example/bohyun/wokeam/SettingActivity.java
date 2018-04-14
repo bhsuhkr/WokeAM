@@ -1,5 +1,6 @@
 package com.example.bohyun.wokeam;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -17,15 +18,11 @@ public class SettingActivity extends PreferenceActivity {
         addPreferencesFromResource(R.xml.setting_activity);
 
         listPreferenceListner();
-        taskGenerator();
-    }
 
-    public void taskGenerator(){
-        if(wakeupTasks[0] != 5){
-
-        }
 
     }
+
+
 
     public void listPreferenceListner(){
         final ListPreference taskCal = (ListPreference) findPreference("math");
