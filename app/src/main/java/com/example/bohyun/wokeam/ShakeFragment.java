@@ -42,11 +42,9 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
                 count++;
                 if(count >= 5)
                 {
-                    ImageView img = getActivity().findViewById(R.id.shakeImg);
-                    img.setImageResource(R.drawable.wakeup);
-
+//                    ImageView img = getActivity().findViewById(R.id.shakeImg);
+//                    img.setImageResource(R.drawable.wakeup);
                     nextFragment();
-
                 }
             }
         });
