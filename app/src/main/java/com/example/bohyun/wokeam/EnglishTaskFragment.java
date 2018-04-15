@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,24 +32,26 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
     TextView button4;
     TextView button5;
 
+    View view;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_english_task, container, false);
-        TextView textView = (TextView) view.findViewById(R.id.question);
+        view = inflater.inflate(R.layout.fragment_english_task, container, false);
+        TextView textView = view.findViewById(R.id.question);
         textView.setText(questions[diff][n]);
-        button1 = (TextView) view.findViewById(R.id.answer1);
+        button1 = view.findViewById(R.id.answer1);
         button1.setText(options[diff][n][0]);
         button1.setOnClickListener(mListener);
-        button2 = (TextView) view.findViewById(R.id.answer2);
+        button2 = view.findViewById(R.id.answer2);
         button2.setText(options[diff][n][1]);
         button2.setOnClickListener(mListener);
-        button3 = (TextView) view.findViewById(R.id.answer3);
+        button3 = view.findViewById(R.id.answer3);
         button3.setText(options[diff][n][2]);
         button3.setOnClickListener(mListener);
-        button4 = (TextView) view.findViewById(R.id.answer4);
+        button4 = view.findViewById(R.id.answer4);
         button4.setText(options[diff][n][3]);
         button4.setOnClickListener(mListener);
-        button5 = (TextView) view.findViewById(R.id.answer5);
+        button5 = view.findViewById(R.id.answer5);
         button5.setText(options[diff][n][4]);
         button5.setOnClickListener(mListener);
 
@@ -63,7 +67,6 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
                 case R.id.answer1:
                     Button b1 = view.findViewById(R.id.answer1);
                     if(b1.getText()==answers[diff][n]){
-                        Toast.makeText(getActivity(),"Correct!", Toast.LENGTH_SHORT).show();
                         nextFragment(true);
                     }else{
                         nextFragment(false);
@@ -72,7 +75,6 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
                 case R.id.answer2:
                     Button b2 = view.findViewById(R.id.answer2);
                     if(b2.getText()==answers[diff][n]){
-                        Toast.makeText(getActivity(),"Correct!", Toast.LENGTH_SHORT).show();
                         nextFragment(true);
                     }else{
                         nextFragment(false);
@@ -81,7 +83,6 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
                 case R.id.answer3:
                     Button b3 = view.findViewById(R.id.answer3);
                     if(b3.getText()==answers[diff][n]){
-                        Toast.makeText(getActivity(),"Correct!", Toast.LENGTH_SHORT).show();
                         nextFragment(true);
                     }else{
                         nextFragment(false);
@@ -90,7 +91,6 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
                 case R.id.answer4:
                     Button b4 = view.findViewById(R.id.answer4);
                     if(b4.getText()==answers[diff][n]){
-                        Toast.makeText(getActivity(),"Correct!", Toast.LENGTH_SHORT).show();
                         nextFragment(true);
                     }else{
                         nextFragment(false);
@@ -99,7 +99,6 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
                 case R.id.answer5:
                     Button b5 = view.findViewById(R.id.answer5);
                     if(b5.getText()==answers[diff][n]){
-                        Toast.makeText(getActivity(),"Correct!", Toast.LENGTH_SHORT).show();
                         nextFragment(true);
                     }else{
                         nextFragment(false);
@@ -147,6 +146,7 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
             button3.setEnabled(false);
             button4.setEnabled(false);
             button5.setEnabled(false);
+            backButtonDisable(view);
             new Timer().schedule(
                     new TimerTask() {
                         @Override
@@ -159,6 +159,23 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
             );
 
         }
+    }
+
+    public void backButtonDisable(View view){
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                Log.i("test", "keyCode: " + keyCode);
+                if( keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
+                    Log.i("test", "onKey Back listener is working!!!");
+                    getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    return true;
+                }
+                return false;
+            }
+        });
     }
 
 }

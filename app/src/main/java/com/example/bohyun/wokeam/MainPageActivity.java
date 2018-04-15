@@ -34,4 +34,5 @@ public class MainPageActivity extends Activity {
         };
         welcomeThread.start();
     }
+
 }

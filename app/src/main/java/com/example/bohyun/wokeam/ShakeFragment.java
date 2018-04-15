@@ -42,8 +42,8 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
                 count++;
                 if(count >= 5)
                 {
-//                    ImageView img = getActivity().findViewById(R.id.shakeImg);
-//                    img.setImageResource(R.drawable.wakeup);
+                    ImageView img = getActivity().findViewById(R.id.shakeImg);
+                    img.setImageResource(R.drawable.wakeup);
 
                     nextFragment();
 
@@ -71,7 +71,7 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
     public void nextFragment() {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        Fragment turnOffFrg = new TurnOffAlarmFragment();
-        transaction.replace(R.id.main_container, turnOffFrg).commit();
+        Fragment turnoffFrg = new TurnOffAlarmFragment();
+        transaction.replace(R.id.main_container, turnoffFrg).commit();
     }
 }

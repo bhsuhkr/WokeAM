@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,9 +25,10 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
     private Button enterBtn;
     private Button regenBtn;
     int answer;
+    View view;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_math_task, container, false);
+        view = inflater.inflate(R.layout.fragment_math_task, container, false);
 
         regenBtn = view.findViewById(R.id.btn_regen);
         regenBtn.setOnClickListener(new View.OnClickListener(){
@@ -84,6 +87,7 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
         }else{
             enterBtn.setEnabled(false);
             regenBtn.setEnabled(false);
+            backButtonDisable(view);
             new Timer().schedule(
                     new TimerTask() {
                         @Override
@@ -96,4 +100,23 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
             );
         }
     }
+
+    public void backButtonDisable(View view){
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                Log.i("test", "keyCode: " + keyCode);
+                if( keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
+                    Log.i("test", "onKey Back listener is working!!!");
+                    getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    return true;
+                }
+                return false;
+            }
+        });
+    }
+
+
 }
