@@ -37,7 +37,7 @@
                 android:textStyle="italic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#2821"
+                android:background="#2891"
                 android:layout_gravity="center"/>
         </FrameLayout>
 
@@ -61,7 +61,7 @@
                 android:textStyle="italic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#3401"
+                android:background="#4491"
                 android:layout_gravity="center"
                 />
 
