@@ -29,16 +29,6 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
     private ShakeDetector mShakeDetector;
     private int count = 0;
 
-    int bluetooth = 1;
-    String address = null;
-    String name = null;
-
-    BluetoothAdapter myBluetooth = null;
-    BluetoothSocket btSocket = null;
-    Set<BluetoothDevice> pairedDevices;
-    static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_shake_task, container, false);
 
@@ -52,10 +42,8 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
                 count++;
                 if(count >= 5)
                 {
-                    sendSignalToAlarmClock();
-
-                    ImageView img = getActivity().findViewById(R.id.shakeImg);
-                    img.setImageResource(R.drawable.wakeup);
+//                    ImageView img = getActivity().findViewById(R.id.shakeImg);
+//                    img.setImageResource(R.drawable.wakeup);
 
                     nextFragment();
 
@@ -81,55 +69,9 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
     }
 
     public void nextFragment() {
-//        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-//        FragmentTransaction transaction = fragmentManager.beginTransaction();
-//        Fragment engTaskFrg = new EnglishTaskFragment();
-//        transaction.replace(R.id.main_container, engTaskFrg).commit();
-        Intent i = new Intent(getActivity(), MainActivity.class);
-        startActivity(i);
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        Fragment turnOffFrg = new TurnOffAlarmFragment();
+        transaction.replace(R.id.main_container, turnOffFrg).commit();
     }
-
-    public void sendSignalToAlarmClock(){
-        try{
-            myBluetooth = BluetoothAdapter.getDefaultAdapter();
-            address = myBluetooth.getAddress();
-            pairedDevices = myBluetooth.getBondedDevices();
-            if (pairedDevices.size() > 0) {
-                for (BluetoothDevice bt : pairedDevices) {
-                    if(bt.getAddress().toString().equals("20:18:01:03:66:77")) {
-                        address = bt.getAddress().toString();
-                        name = bt.getName().toString();
-                    }
-                }
-            }
-
-            BluetoothDevice device = myBluetooth.getRemoteDevice(address);
-            btSocket = device.createRfcommSocketToServiceRecord(myUUID);
-            btSocket.connect();
-
-            led_on_off("1");
-            led_on_off("0");
-            } catch(Exception e) {
-            Toast.makeText(getActivity(), "Bluetooth Connection Fail", Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
-    private void led_on_off(String i)
-    {
-        try
-        {
-            if(btSocket!=null)
-            {
-                OutputStream outputstream = btSocket.getOutputStream();
-                outputstream.write(i.getBytes());
-            }
-        }
-        catch (Exception e)
-        {
-            Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
-
-        }
-    }
-
 }
