@@ -44,6 +44,7 @@ public class TurnOffAlarmFragment extends android.support.v4.app.Fragment {
 
 
     public void sendSignalToAlarmClock(){
+        Toast.makeText(getActivity(), "Turning off the alarm...", Toast.LENGTH_LONG).show();
         try{
             myBluetooth = BluetoothAdapter.getDefaultAdapter();
             address = myBluetooth.getAddress();

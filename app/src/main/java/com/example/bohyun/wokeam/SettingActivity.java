@@ -1,6 +1,5 @@
 package com.example.bohyun.wokeam;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -16,13 +15,8 @@ public class SettingActivity extends PreferenceActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         addPreferencesFromResource(R.xml.setting_activity);
-
         listPreferenceListner();
-
-
     }
-
-
 
     public void listPreferenceListner(){
         final ListPreference taskCal = (ListPreference) findPreference("math");

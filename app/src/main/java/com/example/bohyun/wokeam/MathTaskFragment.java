@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MathTaskFragment extends android.support.v4.app.Fragment {
     private int operand1;
@@ -29,12 +31,8 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
         regenBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //Implement 'disable edit text for 5 sec'
-                Toast.makeText(getActivity().getApplicationContext(), "5 second penalty", Toast.LENGTH_LONG).show();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                Fragment mathTaskFrg = new MathTaskFragment();
-                transaction.replace(R.id.main_container, mathTaskFrg).commit();
+                Toast.makeText(getActivity(),"New Question!", Toast.LENGTH_SHORT).show();
+                nextFragment(false);
             }
         });
 
@@ -52,7 +50,7 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
                     Toast.makeText(getActivity().getApplicationContext(), "Correct!", Toast.LENGTH_LONG).show();
                     nextFragment(true);
                 }else{
-                    Toast.makeText(getActivity().getApplicationContext(), "Wrong!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(),"Incorrect!", Toast.LENGTH_SHORT).show();
                     nextFragment(false);
                 }
             }
@@ -79,12 +77,23 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
     public void nextFragment(boolean check) {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
+        final FragmentTransaction transaction1 = fragmentManager.beginTransaction();
         if (check) {
             Fragment engTaskFrg = new EnglishTaskFragment();
             transaction.replace(R.id.main_container, engTaskFrg).commit();
         }else{
-            Fragment mathTaskFrg = new MathTaskFragment();
-            transaction.replace(R.id.main_container, mathTaskFrg).commit();
+            enterBtn.setEnabled(false);
+            regenBtn.setEnabled(false);
+            new Timer().schedule(
+                    new TimerTask() {
+                        @Override
+                        public void run() {
+                            final Fragment mathTaskFrg = new MathTaskFragment();
+                            transaction1.replace(R.id.main_container, mathTaskFrg).commit();
+                        }
+                    },
+                    3000
+            );
         }
     }
 }

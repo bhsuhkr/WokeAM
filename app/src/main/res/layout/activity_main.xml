@@ -21,7 +21,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="225dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -37,14 +37,14 @@
                 android:textStyle="italic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#2891"
+                android:background="#289"
                 android:layout_gravity="center"/>
         </FrameLayout>
 
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="225dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -61,7 +61,7 @@
                 android:textStyle="italic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#4491"
+                android:background="#1291"
                 android:layout_gravity="center"
                 />
 

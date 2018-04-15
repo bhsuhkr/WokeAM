@@ -1,6 +1,5 @@
 package com.example.bohyun.wokeam;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,7 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Random;
-
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class EnglishTaskFragment extends android.support.v4.app.Fragment{
@@ -24,25 +24,30 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
     int diff = getDifficulty(1)-1;
     Random rand = new Random();
     int n = rand.nextInt(10);
+    TextView button1;
+    TextView button2;
+    TextView button3;
+    TextView button4;
+    TextView button5;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_english_task, container, false);
         TextView textView = (TextView) view.findViewById(R.id.question);
         textView.setText(questions[diff][n]);
-        TextView button1 = (TextView) view.findViewById(R.id.answer1);
+        button1 = (TextView) view.findViewById(R.id.answer1);
         button1.setText(options[diff][n][0]);
         button1.setOnClickListener(mListener);
-        TextView button2 = (TextView) view.findViewById(R.id.answer2);
+        button2 = (TextView) view.findViewById(R.id.answer2);
         button2.setText(options[diff][n][1]);
         button2.setOnClickListener(mListener);
-        TextView button3 = (TextView) view.findViewById(R.id.answer3);
+        button3 = (TextView) view.findViewById(R.id.answer3);
         button3.setText(options[diff][n][2]);
         button3.setOnClickListener(mListener);
-        TextView button4 = (TextView) view.findViewById(R.id.answer4);
+        button4 = (TextView) view.findViewById(R.id.answer4);
         button4.setText(options[diff][n][3]);
         button4.setOnClickListener(mListener);
-        TextView button5 = (TextView) view.findViewById(R.id.answer5);
+        button5 = (TextView) view.findViewById(R.id.answer5);
         button5.setText(options[diff][n][4]);
         button5.setOnClickListener(mListener);
 
@@ -131,12 +136,28 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
     public void nextFragment(boolean check) {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
+        final FragmentTransaction transaction1 = fragmentManager.beginTransaction();
         if (check) {
             Fragment shakeTaskFrg = new ShakeFragment();
             transaction.replace(R.id.main_container, shakeTaskFrg).commit();
         }else{ // create new english Fragment
-            Fragment engTaskFrg = new EnglishTaskFragment();
-            transaction.replace(R.id.main_container, engTaskFrg).commit();
+            Toast.makeText(getActivity(),"Incorrect!", Toast.LENGTH_SHORT).show();
+            button1.setEnabled(false);
+            button2.setEnabled(false);
+            button3.setEnabled(false);
+            button4.setEnabled(false);
+            button5.setEnabled(false);
+            new Timer().schedule(
+                    new TimerTask() {
+                        @Override
+                        public void run() {
+                            final Fragment engTaskFrg = new EnglishTaskFragment();
+                            transaction1.replace(R.id.main_container, engTaskFrg).commit();
+                        }
+                    },
+                    3000
+            );
+
         }
     }
 
