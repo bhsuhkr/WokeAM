@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Detail Screens">
+        <PreferenceScreen
+            android:key="detail"
+            android:title="Wakeup Tasks"
+            android:summary="Select wakeup tasks">
+            <ListPreference
+                android:key="math"
+                android:title="Calculation"
+                android:summary="Addition, subtraction, multiplication or division"
+                android:entries="@array/Difficulty"
+                android:entryValues="@array/Difficulty"
+                android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"/>
+
+            <ListPreference
+                android:key="english"
+                android:title="English"
+                android:summary="Fill in the blank"
+                android:entries="@array/Difficulty"
+                android:entryValues="@array/Difficulty"
+                android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"/>
+
+            <ListPreference
+                android:key="simonSays"
+                android:title="Simon Says"
+                android:summary="Memorize patterns"
+                android:entries="@array/Difficulty"
+                android:entryValues="@array/Difficulty"
+                android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"/>
+
+            <ListPreference
+                android:key="sudoku"
+                android:title="Sudoku"
+                android:summary=" "
+                android:entries="@array/Difficulty"
+                android:entryValues="@array/Difficulty"
+                android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"/>
+
+            <ListPreference
+                android:key="magicSquare"
+                android:title="Magic Square"
+                android:summary=" "
+                android:entries="@array/Difficulty"
+                android:entryValues="@array/Difficulty"
+                android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"/>
+
+            <ListPreference
+                android:key="shake"
+                android:title="Shake"
+                android:summary=" "
+                android:entries="@array/Difficulty"
+                android:entryValues="@array/Difficulty"
+                android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"/>
+
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Other Preferences">
+        <CheckBoxPreference
+            android:key="bluetooth"
+            android:title="Bluetooth Auto Connection"
+            android:summary="Check it on, check it off"
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
