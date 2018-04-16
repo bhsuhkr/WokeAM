@@ -9,7 +9,7 @@
             <ListPreference
                 android:key="math"
                 android:title="Calculation"
-                android:summary="Addition, subtraction, multiplication or division"
+                android:summary="Add, subtract, divide, or multiply numbers of increasing complexity based on your desired difficulty level."
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
@@ -18,7 +18,7 @@
             <ListPreference
                 android:key="english"
                 android:title="English"
-                android:summary="Fill in the blank"
+                android:summary="Choose the correct word to fill in the blank based on context clues."
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
@@ -27,7 +27,7 @@
             <ListPreference
                 android:key="simonSays"
                 android:title="Simon Says"
-                android:summary="Memorize patterns"
+                android:summary="Tap the buttons in the same order as they flash."
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
@@ -36,7 +36,7 @@
             <ListPreference
                 android:key="sudoku"
                 android:title="Sudoku"
-                android:summary=" "
+                android:summary="Fill in the missing numbers in the Sudoku puzzle."
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
@@ -45,7 +45,7 @@
             <ListPreference
                 android:key="magicSquare"
                 android:title="Magic Square"
-                android:summary=" "
+                android:summary="Fill in the missing numbers so that all verticals, diagonals, and horizontals add to the same number."
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
@@ -54,7 +54,7 @@
             <ListPreference
                 android:key="shake"
                 android:title="Shake"
-                android:summary=" "
+                android:summary="Shake your phone until you reach the proper threshold."
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
