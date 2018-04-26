@@ -1,7 +1,7 @@
 package com.example.bohyun.wokeam;
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
-
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,8 +15,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -117,7 +115,7 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
                     getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                     return true;
                 }
-               
+
                 return false;
             }
         });
@@ -127,18 +125,16 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
         String value = preferences.getString("Difficulty", "Not Selected");
         String[] list = value.split(",");
-        Toast.makeText(getActivity(), list[0]+" " + list[1]+" " + list[2]+" " + list[3]+" " + list[4]+" " + list[5], Toast.LENGTH_SHORT).show();
-        selectedfrg = new ShakeFragment();
 
-        if(!list[1].equals("5")){
+        if(!list[1].equals("3")){
             selectedfrg = new EnglishTaskFragment();
-        }else if(!list[2].equals("5")){ //simon says
+        }else if(!list[2].equals("3")){ //simon says
             selectedfrg = new MagicFragment();
-        }else if(!list[3].equals("5")){ //sudoku
+        }else if(!list[3].equals("3")){ //sudoku
             selectedfrg = new MagicFragment();
-        }else if(!list[4].equals("5")){
+        }else if(!list[4].equals("3")){
             selectedfrg = new MagicFragment();
-        }else if(!list[5].equals("5")){
+        }else if(!list[5].equals("3")){
             selectedfrg = new ShakeFragment();
         }else{
             selectedfrg = new TurnOffAlarmFragment();
@@ -148,6 +144,4 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.main_container, selectedfrg).commit();
     }
-
-
 }

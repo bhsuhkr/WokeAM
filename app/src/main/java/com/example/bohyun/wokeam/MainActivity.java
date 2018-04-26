@@ -6,15 +6,12 @@ import android.content.SharedPreferences;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -26,24 +23,39 @@ public class MainActivity extends Activity {
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
+
+
         final Button settingButton = findViewById(R.id.btn_settings);
         settingButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buttonEffect(settingButton);
+//                buttonEffect(settingButton);
                 Intent intent = new Intent(MainActivity.this, SettingActivity.class);
                 startActivity(intent);
             }
         });
 
-        final Button exitButton = findViewById(R.id.btn_start);
-        exitButton.setOnClickListener( new View.OnClickListener() {
+        final Button startButton = findViewById(R.id.btn_start);
+        startButton.setOnClickListener( new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                buttonEffect(exitButton);
-                startActivity(new Intent(getApplicationContext(),TaskActivity.class ));
-            }
+                try {
+                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                    String value = preferences.getString("Difficulty", "Not Selected");
+                    String[] list = value.split(",");
+                    if (list[0].equals("3") && list[1].equals("3") && list[2].equals("3") && list[3].equals("3") && list[4].equals("3") && list[5].equals("3")) {
+                        Toast.makeText(MainActivity.this, "No Task Selected!", Toast.LENGTH_SHORT).show();
+                    }else{
+//                        buttonEffect(startButton);
+//                        Toast.makeText(MainActivity.this, list[0]+" " + list[1]+" " + list[2]+" " + list[3]+" " + list[4]+" " + list[5], Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), TaskActivity.class));
+                    }
+                }catch(Exception e){
+                        Toast.makeText(MainActivity.this, "No Task Selected.", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
         });
 
     }

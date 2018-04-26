@@ -1,6 +1,8 @@
 package com.example.bohyun.wokeam;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -12,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -32,7 +33,8 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
     TextView button4;
     TextView button5;
 
-    View view;
+    private View view;
+    private Fragment selectedfrg;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -137,8 +139,22 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         final FragmentTransaction transaction1 = fragmentManager.beginTransaction();
         if (check) {
-            Fragment magicFrg = new MagicFragment();
-            transaction.replace(R.id.main_container, magicFrg).commit();
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+            String value = preferences.getString("Difficulty", "3");
+            String[] list = value.split(",");
+
+            if(!list[2].equals("3")){ //simon says
+                selectedfrg = new MagicFragment();
+            }else if(!list[3].equals("3")){ //sudoku
+                selectedfrg = new MagicFragment();
+            }else if(!list[4].equals("3")){
+                selectedfrg = new MagicFragment();
+            }else if(!list[5].equals("3")){
+                selectedfrg = new ShakeFragment();
+            }else{
+                selectedfrg = new TurnOffAlarmFragment();
+            }
+            transaction.replace(R.id.main_container, selectedfrg).commit();
         }else{ // create new english Fragment
             Toast.makeText(getActivity(),"Incorrect! Try again.", Toast.LENGTH_SHORT).show();
             button1.setEnabled(false);

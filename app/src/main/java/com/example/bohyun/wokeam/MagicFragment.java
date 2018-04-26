@@ -84,6 +84,16 @@ public class MagicFragment extends android.support.v4.app.Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        String value = preferences.getString("Difficulty", "Not Selected");
+        String[] list = value.split(",");
+        if(list[4].equals("0")){
+            difficulty=1;
+        } else if(list[4].equals("1")) {
+            difficulty = 2;
+        } else if(list[4].equals("2")) {
+            difficulty = 3;
+        }
         view = inflater.inflate(R.layout.fragment_magic_task, container, false);
         if (difficulty == 1) {
             view = inflater.inflate(R.layout.fragment_magic_task, container, false);
@@ -369,19 +379,16 @@ public class MagicFragment extends android.support.v4.app.Fragment{
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
         String value = preferences.getString("Difficulty", "Not Selected");
         String[] list = value.split(",");
-        Toast.makeText(getActivity(), list[0]+" " + list[1]+" " + list[2]+" " + list[3]+" " + list[4]+" " + list[5], Toast.LENGTH_SHORT).show();
-        selectedfrg = new ShakeFragment();
 
-        if(!list[5].equals("5")){
-            selectedfrg = new ShakeFragment();
-        }else{
+        selectedfrg = new ShakeFragment();
+        if(list[5].equals("3")){
             selectedfrg = new TurnOffAlarmFragment();
+        } else{
+            selectedfrg = new ShakeFragment();
         }
 
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.main_container, selectedfrg).commit();
     }
-
-
 }

@@ -1,26 +1,17 @@
 package com.example.bohyun.wokeam;
 
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothSocket;
 import android.content.Context;
-import android.content.Intent;
+import android.content.SharedPreferences;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Toast;
-
-import java.io.OutputStream;
-import java.util.Set;
-import java.util.UUID;
 
 public class ShakeFragment extends android.support.v4.app.Fragment  {
 
@@ -32,7 +23,6 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_shake_task, container, false);
 
-
         mSensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mShakeDetector = new ShakeDetector();
@@ -40,15 +30,19 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
             @Override
             public void onShake(int count) {
                 count++;
-                if(count >= 5)
-                {
-//                    ImageView img = getActivity().findViewById(R.id.shakeImg);
-//                    img.setImageResource(R.drawable.wakeup);
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+                String value = preferences.getString("Difficulty", "3");
+                String[] list = value.split(",");
+
+                if(list[5].equals("0") && count >= 5) {
+                    nextFragment();
+                } else if(list[5].equals("1") && count >= 10){
+                    nextFragment();
+                }else if(list[5].equals("2") && count >= 15){
                     nextFragment();
                 }
             }
         });
-
         return view;
     }
 

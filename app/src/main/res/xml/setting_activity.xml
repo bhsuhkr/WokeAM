@@ -13,7 +13,7 @@
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
-                android:defaultValue="None"/>
+                />
 
             <ListPreference
                 android:key="english"
@@ -22,7 +22,7 @@
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
-                android:defaultValue="None"/>
+                />
 
             <ListPreference
                 android:key="simonSays"
@@ -31,7 +31,7 @@
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
-                android:defaultValue="None"/>
+                />
 
             <ListPreference
                 android:key="sudoku"
@@ -40,7 +40,7 @@
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
-                android:defaultValue="None"/>
+                />
 
             <ListPreference
                 android:key="magicSquare"
@@ -49,7 +49,7 @@
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
-                android:defaultValue="None"/>
+                />
 
             <ListPreference
                 android:key="shake"
@@ -58,7 +58,7 @@
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
-                android:defaultValue="None"/>
+                />
 
         </PreferenceScreen>
     </PreferenceCategory>
