@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Make horizontals, diagonals, and verticals all equal 34."
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="75dp" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="4"
+        android:orientation="horizontal">
+
+
+        <Button android:id="@+id/magic1"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic2"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic3"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic4"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic5"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic6"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic7"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic8"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic9"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic10"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic11"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic12"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic13"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic14"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic15"
+            android:clickable="false"/>
+
+        <Button android:id="@+id/magic16"
+            android:clickable="false"/>
+
+
+
+
+    </GridLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="75dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Enter answers here:"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="3"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/magic17"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:inputType="phone"
+            android:digits="1234567890"
+            android:hint="A"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffffff" />
+
+        <EditText
+            android:id="@+id/magic18"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:inputType="phone"
+            android:digits="1234567890"
+            android:hint="B"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffffff" />
+
+        <EditText
+            android:id="@+id/magic19"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:inputType="phone"
+            android:digits="1234567890"
+            android:hint="C"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffffff" />
+
+    </GridLayout>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:id="@+id/submit"
+        android:text="Submit"/>
+
+
+</LinearLayout>

@@ -1,6 +1,8 @@
 package com.example.bohyun.wokeam;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -25,7 +27,10 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
     private Button enterBtn;
     private Button regenBtn;
     int answer;
-    View view;
+
+    private View view;
+    private Fragment selectedfrg;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_math_task, container, false);
@@ -50,10 +55,10 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
 
                 String userAnswer = editText.getText().toString();
                 if(userAnswer.compareTo(String.valueOf(answer))==0){
-                    Toast.makeText(getActivity().getApplicationContext(), "Correct!", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getActivity().getApplicationContext(), "Correct!", Toast.LENGTH_LONG).show();
                     nextFragment(true);
                 }else{
-                    Toast.makeText(getActivity(),"Incorrect!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),"Incorrect! Try again.", Toast.LENGTH_SHORT).show();
                     nextFragment(false);
                 }
             }
@@ -82,8 +87,7 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         final FragmentTransaction transaction1 = fragmentManager.beginTransaction();
         if (check) {
-            Fragment engTaskFrg = new EnglishTaskFragment();
-            transaction.replace(R.id.main_container, engTaskFrg).commit();
+            checkNextTask();
         }else{
             enterBtn.setEnabled(false);
             regenBtn.setEnabled(false);
@@ -113,9 +117,36 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
                     getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                     return true;
                 }
+               
                 return false;
             }
         });
+    }
+
+    public void checkNextTask(){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        String value = preferences.getString("Difficulty", "Not Selected");
+        String[] list = value.split(",");
+        Toast.makeText(getActivity(), list[0]+" " + list[1]+" " + list[2]+" " + list[3]+" " + list[4]+" " + list[5], Toast.LENGTH_SHORT).show();
+        selectedfrg = new ShakeFragment();
+
+        if(!list[1].equals("5")){
+            selectedfrg = new EnglishTaskFragment();
+        }else if(!list[2].equals("5")){ //simon says
+            selectedfrg = new MagicFragment();
+        }else if(!list[3].equals("5")){ //sudoku
+            selectedfrg = new MagicFragment();
+        }else if(!list[4].equals("5")){
+            selectedfrg = new MagicFragment();
+        }else if(!list[5].equals("5")){
+            selectedfrg = new ShakeFragment();
+        }else{
+            selectedfrg = new TurnOffAlarmFragment();
+        }
+
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.main_container, selectedfrg).commit();
     }
 
 
