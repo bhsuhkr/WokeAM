@@ -23,8 +23,6 @@ public class MainActivity extends Activity {
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-
-
         final Button settingButton = findViewById(R.id.btn_settings);
         settingButton.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -48,7 +46,6 @@ public class MainActivity extends Activity {
                         Toast.makeText(MainActivity.this, "No Task Selected!", Toast.LENGTH_SHORT).show();
                     }else{
 //                        buttonEffect(startButton);
-//                        Toast.makeText(MainActivity.this, list[0]+" " + list[1]+" " + list[2]+" " + list[3]+" " + list[4]+" " + list[5], Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(getApplicationContext(), TaskActivity.class));
                     }
                 }catch(Exception e){
@@ -97,7 +94,5 @@ public class MainActivity extends Activity {
                 return false;
             }
         });
-
     }
-
 }
