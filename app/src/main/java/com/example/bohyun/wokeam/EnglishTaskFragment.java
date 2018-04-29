@@ -138,7 +138,7 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         final FragmentTransaction transaction1 = fragmentManager.beginTransaction();
         if (check) {
-            Fragment shakeTaskFrg = new ShakeFragment();
+            Fragment shakeTaskFrg = new SimonTaskFragment();
             transaction.replace(R.id.main_container, shakeTaskFrg).commit();
         }else{ // create new english Fragment
             Toast.makeText(getActivity(),"Incorrect!", Toast.LENGTH_SHORT).show();

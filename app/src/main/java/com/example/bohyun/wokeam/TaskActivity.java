@@ -15,6 +15,7 @@ public class TaskActivity extends AppCompatActivity {
     private Fragment sudokuTaskFrg;
     private Fragment magicSquareTaskFrg;
     private Fragment shakeTaskFrg;
+    private Fragment simonTaskFrg;
 
     private FragmentManager fragmentManager;
 
@@ -27,8 +28,9 @@ public class TaskActivity extends AppCompatActivity {
 
         shakeTaskFrg = new ShakeFragment();
         mathTaskFrg = new MathTaskFragment();
+        simonTaskFrg = new SimonTaskFragment();
 
-        selectedfrg = mathTaskFrg;
+        selectedfrg = simonTaskFrg;
 
         //Daily View || Start View
         fragmentManager = getSupportFragmentManager();

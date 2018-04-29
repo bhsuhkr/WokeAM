@@ -1,10 +1,6 @@
 package com.example.bohyun.wokeam;
 
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothSocket;
 import android.content.Context;
-import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
@@ -14,13 +10,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Toast;
-
-import java.io.OutputStream;
-import java.util.Set;
-import java.util.UUID;
 
 public class ShakeFragment extends android.support.v4.app.Fragment  {
 
@@ -71,7 +60,7 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
     public void nextFragment() {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        Fragment turnOffFrg = new TurnOffAlarmFragment();
-        transaction.replace(R.id.main_container, turnOffFrg).commit();
+        Fragment simonTaskFrg = new SimonTaskFragment();
+        transaction.replace(R.id.main_container, simonTaskFrg).commit();
     }
 }
