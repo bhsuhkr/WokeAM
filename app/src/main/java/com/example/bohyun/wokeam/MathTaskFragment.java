@@ -24,10 +24,14 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
     private int operand2;
     private Button enterBtn;
     private Button regenBtn;
+    private TextView operator;
+    private TextView operand11;
+    private TextView operand22;
     int answer;
 
     private View view;
     private Fragment selectedfrg;
+    private int difficulty = 1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -62,22 +66,63 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
             }
         });
 
+        operand11 = view.findViewById(R.id.operand1);
+        operand22 = view.findViewById(R.id.operand2);
+        operator = view.findViewById(R.id.operator);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        String value = preferences.getString("Difficulty", "Not Selected");
+        String[] list = value.split(",");
+        if(list[0].equals("0")){
+            difficulty=1;
+            generateQuestion(difficulty);
+        } else if(list[0].equals("1")) {
+            difficulty = 2;
+            generateQuestion(difficulty);
+        } else if(list[0].equals("2")) {
+            difficulty = 3;
+            generateQuestion(difficulty);
+        }
+
         return view;
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
+    public void generateQuestion(int level){
+        if(level==1){
+            Random rand = new Random();
+            operand1 = rand.nextInt(90) + 10;
+            operand2 = rand.nextInt(90) + 10;
+            answer = operand1 + operand2;
 
-        Random rand = new Random();
-        operand1 = rand.nextInt(90) + 10;
-        operand2 = rand.nextInt(90) + 10;
-        answer = operand1 + operand2;
+            operand11.setText(String.valueOf(operand1));
+            operand22.setText(String.valueOf(operand2));
 
-        TextView operand11 = getView().findViewById(R.id.operand1);
-        TextView operand22 = getView().findViewById(R.id.operand2);
-        operand11.setText(String.valueOf(operand1));
-        operand22.setText(String.valueOf(operand2));
+        }else if(level==2){
+            Random rand = new Random();
+            operand1 = rand.nextInt(90) + 10;
+            operand2 = rand.nextInt(90) + 10;
+            while(operand1 < operand2){
+                rand = new Random();
+                operand1 = rand.nextInt(90) + 10;
+                operand2 = rand.nextInt(90) + 10;
+            }
+            operator.setText(" - ");
+            answer = operand1 - operand2;
+
+            operand11.setText(String.valueOf(operand1));
+            operand22.setText(String.valueOf(operand2));
+
+        }else if(level==3){
+            Random rand = new Random();
+            operand1 = rand.nextInt(50);
+            operand2 = rand.nextInt(50);
+
+            operator.setText(" × ");
+            answer = operand1 * operand2;
+
+            operand11.setText(String.valueOf(operand1));
+            operand22.setText(String.valueOf(operand2));
+        }
     }
 
     public void nextFragment(boolean check) {
