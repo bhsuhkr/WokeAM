@@ -29,8 +29,9 @@ public class TaskActivity extends AppCompatActivity {
         shakeTaskFrg = new ShakeFragment();
         mathTaskFrg = new MathTaskFragment();
         simonTaskFrg = new SimonTaskFragment();
+        engTaskFrg = new EnglishTaskFragment();
 
-        selectedfrg = simonTaskFrg;
+        selectedfrg = engTaskFrg;
 
         //Daily View || Start View
         fragmentManager = getSupportFragmentManager();

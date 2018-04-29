@@ -28,7 +28,7 @@ public class SimonTaskFragment extends android.support.v4.app.Fragment{
     Random random = new Random();
     Boolean sequenceDone;
     boolean isCorrect;
-    int difficulty = 3;
+    int difficulty = 1;
     int end;
     public Integer[] sequence;
     public Integer[] sequence1 = {
