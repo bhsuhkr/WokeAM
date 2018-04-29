@@ -27,31 +27,76 @@
 
 
         <Button android:id="@+id/magic1"
-            android:clickable="false" />
+            android:clickable="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/background"/>
 
         <Button android:id="@+id/magic2"
-            android:clickable="false"/>
+            android:clickable="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/background"/>
 
         <Button android:id="@+id/magic3"
-            android:clickable="false"/>
+            android:clickable="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/background"/>
 
         <Button android:id="@+id/magic4"
-            android:clickable="false"/>
+            android:clickable="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/background"/>
 
         <Button android:id="@+id/magic5"
-            android:clickable="false"/>
+            android:clickable="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/background"/>
 
         <Button android:id="@+id/magic6"
-            android:clickable="false"/>
+            android:clickable="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/background"/>
 
         <Button android:id="@+id/magic7"
-            android:clickable="false"/>
+            android:clickable="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/background"/>
 
         <Button android:id="@+id/magic8"
-            android:clickable="false"/>
+            android:clickable="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/background"/>
 
         <Button android:id="@+id/magic9"
-            android:clickable="false"/>
+            android:clickable="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/background"/>
 
     </GridLayout>
 
@@ -103,7 +148,8 @@
         android:layout_gravity="center"
         android:id="@+id/submit"
         android:text="Submit"
-        android:onClick="check"/>
+        android:onClick="check"
+        android:background="@drawable/background"/>
 
 
 

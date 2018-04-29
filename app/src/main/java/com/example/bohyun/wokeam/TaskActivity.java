@@ -27,8 +27,10 @@ public class TaskActivity extends AppCompatActivity {
 
         mathTaskFrg = new MathTaskFragment();
         engTaskFrg = new EnglishTaskFragment();
+        simonSaysTaskFrg = new SimonTaskFragment();
         magicFrg = new MagicFragment();
         shakeTaskFrg = new ShakeFragment();
+
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(TaskActivity.this);
         String value = preferences.getString("Difficulty", "Not Selected");
@@ -39,9 +41,9 @@ public class TaskActivity extends AppCompatActivity {
         }else if(!list[1].equals("3")){
             selectedfrg = engTaskFrg;
         }else if(!list[2].equals("3")){ //simon says
-            selectedfrg = mathTaskFrg;
+            selectedfrg = simonSaysTaskFrg;
         }else if(!list[3].equals("3")){ //sudoku
-            selectedfrg = mathTaskFrg;
+            selectedfrg = magicFrg;
         }else if(!list[4].equals("3")){
             selectedfrg = magicFrg;
         }else if(!list[5].equals("3")){

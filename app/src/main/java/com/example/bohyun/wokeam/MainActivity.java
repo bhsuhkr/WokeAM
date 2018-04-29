@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
         settingButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                buttonEffect(settingButton);
+                buttonEffect(settingButton);
                 Intent intent = new Intent(MainActivity.this, SettingActivity.class);
                 startActivity(intent);
             }
@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
                     if (list[0].equals("3") && list[1].equals("3") && list[2].equals("3") && list[3].equals("3") && list[4].equals("3") && list[5].equals("3")) {
                         Toast.makeText(MainActivity.this, "No Task Selected!", Toast.LENGTH_SHORT).show();
                     }else{
-//                        buttonEffect(startButton);
+                        buttonEffect(startButton);
                         startActivity(new Intent(getApplicationContext(), TaskActivity.class));
                     }
                 }catch(Exception e){

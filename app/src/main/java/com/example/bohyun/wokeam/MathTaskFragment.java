@@ -173,8 +173,8 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
 
         if(!list[1].equals("3")){
             selectedfrg = new EnglishTaskFragment();
-        }else if(!list[2].equals("3")){ //simon says
-            selectedfrg = new MagicFragment();
+        }else if(!list[2].equals("3")){
+            selectedfrg = new SimonTaskFragment();
         }else if(!list[3].equals("3")){ //sudoku
             selectedfrg = new MagicFragment();
         }else if(!list[4].equals("3")){

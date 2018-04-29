@@ -144,7 +144,7 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
             String[] list = value.split(",");
 
             if(!list[2].equals("3")){ //simon says
-                selectedfrg = new MagicFragment();
+                selectedfrg = new SimonTaskFragment();
             }else if(!list[3].equals("3")){ //sudoku
                 selectedfrg = new MagicFragment();
             }else if(!list[4].equals("3")){
