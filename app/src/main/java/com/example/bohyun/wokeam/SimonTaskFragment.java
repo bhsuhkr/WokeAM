@@ -60,15 +60,15 @@ public class SimonTaskFragment extends android.support.v4.app.Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         sequenceDone = false;
         View view = inflater.inflate(R.layout.fragment_simon_task, container, false);
-        red = (ImageButton) view.findViewById(R.id.red);
+        red = view.findViewById(R.id.red);
         red.setOnClickListener(mListener);
-        blue = (ImageButton) view.findViewById(R.id.blue);
+        blue = view.findViewById(R.id.blue);
         blue.setOnClickListener(mListener);
-        yellow = (ImageButton) view.findViewById(R.id.yellow);
+        yellow = view.findViewById(R.id.yellow);
         yellow.setOnClickListener(mListener);
-        green = (ImageButton) view.findViewById(R.id.green);
+        green = view.findViewById(R.id.green);
         green.setOnClickListener(mListener);
-        start = (Button) view.findViewById(R.id.start);
+        start = view.findViewById(R.id.start);
         start.setOnClickListener(mListener);
         start.setEnabled(true);
 
@@ -264,7 +264,8 @@ public class SimonTaskFragment extends android.support.v4.app.Fragment{
     public static void buttonEffect(View button){
         button.setOnTouchListener(new View.OnTouchListener() {
 
-            public boolean onTouch(View v, MotionEvent event) {
+            @Override
+            public boolean onTouch(final View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         v.getBackground().setColorFilter(0xe036b2c0, PorterDuff.Mode.SRC_ATOP);
@@ -272,13 +273,19 @@ public class SimonTaskFragment extends android.support.v4.app.Fragment{
                         break;
                     }
                     case MotionEvent.ACTION_UP: {
-                        v.getBackground().clearColorFilter();
-                        v.invalidate();
+                        v.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                v.getBackground().clearColorFilter();
+                                v.invalidate();
+                            }
+                        }, 100L);
                         break;
                     }
                 }
                 return false;
             }
+
         });
     }
 }

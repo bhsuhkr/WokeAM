@@ -23,17 +23,19 @@ public class MainActivity extends Activity {
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
+
         final Button settingButton = findViewById(R.id.btn_settings);
+        buttonEffect(settingButton);
         settingButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buttonEffect(settingButton);
                 Intent intent = new Intent(MainActivity.this, SettingActivity.class);
                 startActivity(intent);
             }
         });
 
         final Button startButton = findViewById(R.id.btn_start);
+        buttonEffect(startButton);
         startButton.setOnClickListener( new View.OnClickListener() {
 
             @Override
@@ -42,16 +44,23 @@ public class MainActivity extends Activity {
                     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
                     String value = preferences.getString("Difficulty", "Not Selected");
                     String[] list = value.split(",");
-                    if (list[0].equals("3") && list[1].equals("3") && list[2].equals("3") && list[3].equals("3") && list[4].equals("3") && list[5].equals("3")) {
-                        Toast.makeText(MainActivity.this, "No Task Selected!", Toast.LENGTH_SHORT).show();
+
+                    //check if user selects at least 3 tasks.
+                    int count = 0;
+                    String three = "3";
+                    for (int i = 0; i < list.length; i++)
+                    {
+                        if (three.equals(list[i]))
+                            count++;
+                    }
+
+                    if (count > 3) {
+                        Toast.makeText(MainActivity.this, "Needs at least 3 tasks!", Toast.LENGTH_SHORT).show();
                     }else{
-                        buttonEffect(startButton);
                         startActivity(new Intent(getApplicationContext(), TaskActivity.class));
                     }
                 }catch(Exception e){
-                        Toast.makeText(MainActivity.this, "No Task Selected.", Toast.LENGTH_SHORT).show();
                     }
-
                 }
         });
 
@@ -78,7 +87,8 @@ public class MainActivity extends Activity {
     public static void buttonEffect(View button){
         button.setOnTouchListener(new View.OnTouchListener() {
 
-            public boolean onTouch(View v, MotionEvent event) {
+            @Override
+            public boolean onTouch(final View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         v.getBackground().setColorFilter(0xe036b2c0, PorterDuff.Mode.SRC_ATOP);
@@ -86,13 +96,19 @@ public class MainActivity extends Activity {
                         break;
                     }
                     case MotionEvent.ACTION_UP: {
-                        v.getBackground().clearColorFilter();
-                        v.invalidate();
+                        v.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                v.getBackground().clearColorFilter();
+                                v.invalidate();
+                            }
+                        }, 100L);
                         break;
                     }
                 }
                 return false;
             }
+
         });
     }
 }

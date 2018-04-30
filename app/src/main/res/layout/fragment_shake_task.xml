@@ -6,11 +6,17 @@
     android:orientation="vertical"
     >
 
+    <ProgressBar
+        android:id="@+id/progressBarId"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
     <ImageView
         android:id="@+id/shakeImg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/shake"
         android:scaleType="center"/>
+
 
 </LinearLayout>
