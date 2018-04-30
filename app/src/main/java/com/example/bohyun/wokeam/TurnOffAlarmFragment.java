@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
-
 import java.io.OutputStream;
 import java.util.Set;
 import java.util.UUID;
@@ -39,7 +38,6 @@ public class TurnOffAlarmFragment extends android.support.v4.app.Fragment {
                 sendSignalToAlarmClock();
             }
         });
-
         return view;
     }
 

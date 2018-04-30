@@ -12,10 +12,10 @@
         android:orientation="vertical">
         <Space
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="10dp" />
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="140dp"
             android:layout_gravity="center|bottom">
             <TextView
                 android:id="@+id/question"
