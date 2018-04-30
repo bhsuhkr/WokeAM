@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.widget.Toast;
 
 public class TaskActivity extends AppCompatActivity {
     private Fragment selectedfrg;
@@ -34,7 +33,7 @@ public class TaskActivity extends AppCompatActivity {
 
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(TaskActivity.this);
-        String value = preferences.getString("Difficulty", "Not Selected");
+        String value = preferences.getString("Difficulty", "3,3,3,3,3,3");
         String[] list = value.split(",");
 //        Toast.makeText(TaskActivity.this, "Tasks: " + list[0]+" " + list[1]+" " + list[2]+" " + list[3]+" " + list[4]+" " + list[5], Toast.LENGTH_SHORT).show();
         if(Integer.parseInt(list[0]) != 3){

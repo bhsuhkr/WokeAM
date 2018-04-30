@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 try {
                     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                    String value = preferences.getString("Difficulty", "Not Selected");
+                    String value = preferences.getString("Difficulty", "3,3,3,3,3,3");
                     String[] list = value.split(",");
 
                     //check if user selects at least 3 tasks.

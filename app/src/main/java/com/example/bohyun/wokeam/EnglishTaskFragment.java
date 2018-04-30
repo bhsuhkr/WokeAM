@@ -193,7 +193,7 @@ public class EnglishTaskFragment extends android.support.v4.app.Fragment{
 
     public void checkNextTask(){
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        String value = preferences.getString("Difficulty", "Not Selected");
+        String value = preferences.getString("Difficulty", "3,3,3,3,3,3");
         String[] list = value.split(",");
 
        if(!list[2].equals("3")){

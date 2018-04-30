@@ -41,7 +41,7 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
             public void onShake(int count) {
                 count++;
                 SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-                String value = preferences.getString("Difficulty", "3");
+                String value = preferences.getString("Difficulty", "3,3,3,3,3,3");
                 String[] list = value.split(",");
                 if(list[5].equals("0")){
                     progressStatus += 16;

@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,8 @@ import android.widget.Button;
 import android.widget.Toast;
 import java.io.OutputStream;
 import java.util.Set;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.UUID;
 
 public class TurnOffAlarmFragment extends android.support.v4.app.Fragment {
@@ -34,8 +37,10 @@ public class TurnOffAlarmFragment extends android.support.v4.app.Fragment {
         turnoffBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                turnoffBtn.setEnabled(false);
                 Toast.makeText(getActivity(), "Turning off the alarm...", Toast.LENGTH_LONG).show();
                 sendSignalToAlarmClock();
+                
             }
         });
         return view;
@@ -60,8 +65,6 @@ public class TurnOffAlarmFragment extends android.support.v4.app.Fragment {
             btSocket = device.createRfcommSocketToServiceRecord(myUUID);
             btSocket.connect();
 
-            led_on_off("1");
-            led_on_off("1");
             led_on_off("1");
             led_on_off("1");
             led_on_off("1");

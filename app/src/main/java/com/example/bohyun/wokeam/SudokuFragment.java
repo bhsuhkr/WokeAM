@@ -86,13 +86,10 @@ public class SudokuFragment extends Fragment {
         String[] list = value.split(",");
 
         if(list[3].equals("0")){
-            Toast.makeText(getContext(), "easy", Toast.LENGTH_SHORT).show();
             difficulty = 1;
         } else if(list[3].equals("1")) {
-            Toast.makeText(getContext(), "noraml", Toast.LENGTH_SHORT).show();
             difficulty = 2;
         } else if(list[3].equals("2")) {
-            Toast.makeText(getContext(), "hard", Toast.LENGTH_SHORT).show();
             difficulty = 3;
         }
 

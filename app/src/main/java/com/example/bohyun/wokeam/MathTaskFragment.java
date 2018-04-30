@@ -71,7 +71,7 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
         operator = view.findViewById(R.id.operator);
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        String value = preferences.getString("Difficulty", "Not Selected");
+        String value = preferences.getString("Difficulty", "3,3,3,3,3,3");
         String[] list = value.split(",");
         if(list[0].equals("0")){
             difficulty=1;
@@ -168,7 +168,7 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
 
     public void checkNextTask(){
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        String value = preferences.getString("Difficulty", "Not Selected");
+        String value = preferences.getString("Difficulty", "3,3,3,3,3,3");
         String[] list = value.split(",");
 
         if(!list[1].equals("3")){

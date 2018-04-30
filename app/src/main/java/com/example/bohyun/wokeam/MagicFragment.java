@@ -85,7 +85,7 @@ public class MagicFragment extends android.support.v4.app.Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-        String value = preferences.getString("Difficulty", "Not Selected");
+        String value = preferences.getString("Difficulty", "3,3,3,3,3,3");
         String[] list = value.split(",");
         if(list[4].equals("0")){
             difficulty=1;

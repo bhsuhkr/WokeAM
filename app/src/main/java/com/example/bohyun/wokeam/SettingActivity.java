@@ -11,7 +11,7 @@ import android.view.WindowManager;
 public class SettingActivity extends PreferenceActivity {
 
     //The order of tasks: Math, English, Simon Says, Sudoku, Magic Square, Shake
-    int[] wakeupTasks = {1, 1, 1, 1, 1, 1};
+    int[] wakeupTasks = {3,3,3,3,3,3};
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
