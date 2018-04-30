@@ -246,8 +246,8 @@ public class SimonTaskFragment extends android.support.v4.app.Fragment{
         String value = preferences.getString("Difficulty", "Not Selected");
         String[] list = value.split(",");
 
-        if(!list[3].equals("3")){ //sudoku
-            selectedfrg = new MagicFragment();
+        if(!list[3].equals("3")){
+            selectedfrg = new SudokuFragment();
         }else if(!list[4].equals("3")){
             selectedfrg = new MagicFragment();
         }else if(!list[5].equals("3")){

@@ -175,8 +175,8 @@ public class MathTaskFragment extends android.support.v4.app.Fragment {
             selectedfrg = new EnglishTaskFragment();
         }else if(!list[2].equals("3")){
             selectedfrg = new SimonTaskFragment();
-        }else if(!list[3].equals("3")){ //sudoku
-            selectedfrg = new MagicFragment();
+        }else if(!list[3].equals("3")){
+            selectedfrg = new SudokuFragment();
         }else if(!list[4].equals("3")){
             selectedfrg = new MagicFragment();
         }else if(!list[5].equals("3")){

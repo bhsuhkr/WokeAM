@@ -44,13 +44,13 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
                 String value = preferences.getString("Difficulty", "3");
                 String[] list = value.split(",");
                 if(list[5].equals("0")){
-                    progressStatus += 15;
+                    progressStatus += 16;
                     progressBar.setProgress(progressStatus);
                 } else if(list[5].equals("1")){
                     progressStatus += 7;
                     progressBar.setProgress(progressStatus);
                 } else if(list[5].equals("2")){
-                    progressStatus += 4;
+                    progressStatus += 5;
                     progressBar.setProgress(progressStatus);
                 }
 
@@ -58,7 +58,7 @@ public class ShakeFragment extends android.support.v4.app.Fragment  {
                     nextFragment();
                 } else if(list[5].equals("1") && count >= 15){
                     nextFragment();
-                }else if(list[5].equals("2") && count >= 25){
+                }else if(list[5].equals("2") && count >= 21){
                     nextFragment();
                 }
             }

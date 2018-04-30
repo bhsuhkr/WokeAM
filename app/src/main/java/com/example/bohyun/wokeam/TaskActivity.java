@@ -28,6 +28,7 @@ public class TaskActivity extends AppCompatActivity {
         mathTaskFrg = new MathTaskFragment();
         engTaskFrg = new EnglishTaskFragment();
         simonSaysTaskFrg = new SimonTaskFragment();
+        sudokuTaskFrg = new SudokuFragment();
         magicFrg = new MagicFragment();
         shakeTaskFrg = new ShakeFragment();
 
@@ -40,10 +41,10 @@ public class TaskActivity extends AppCompatActivity {
             selectedfrg = mathTaskFrg;
         }else if(!list[1].equals("3")){
             selectedfrg = engTaskFrg;
-        }else if(!list[2].equals("3")){ //simon says
+        }else if(!list[2].equals("3")){
             selectedfrg = simonSaysTaskFrg;
-        }else if(!list[3].equals("3")){ //sudoku
-            selectedfrg = magicFrg;
+        }else if(!list[3].equals("3")){
+            selectedfrg = sudokuTaskFrg;
         }else if(!list[4].equals("3")){
             selectedfrg = magicFrg;
         }else if(!list[5].equals("3")){

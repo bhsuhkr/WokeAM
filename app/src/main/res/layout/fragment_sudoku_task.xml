@@ -1,0 +1,1355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="75dp" />
+
+    <View
+        android:layout_width="323dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/sudoku0_0"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku0_1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="none"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku0_2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku0_3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku0_4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku0_5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku0_6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku0_7"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku0_8"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+        </GridLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/sudoku1_0"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku1_1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku1_2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku1_3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku1_4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku1_5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku1_6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku1_7"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku1_8"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+        </GridLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/sudoku2_0"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku2_1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku2_2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku2_3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku2_4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku2_5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku2_6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku2_7"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku2_8"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+        </GridLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="323dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/sudoku3_0"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku3_1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku3_2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku3_3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku3_4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku3_5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku3_6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku3_7"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku3_8"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+        </GridLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/sudoku4_0"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku4_1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku4_2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku4_3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku4_4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku4_5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku4_6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku4_7"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku4_8"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+        </GridLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/sudoku5_0"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku5_1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku5_2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku5_3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku5_4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku5_5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku5_6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku5_7"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku5_8"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+        </GridLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="323dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/sudoku6_0"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku6_1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku6_2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku6_3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku6_4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku6_5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku6_6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku6_7"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku6_8"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+        </GridLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/sudoku7_0"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku7_1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku7_2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku7_3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku7_4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku7_5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku7_6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku7_7"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku7_8"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+        </GridLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/sudoku8_0"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku8_1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku8_2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku8_3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku8_4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku8_5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku8_6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku8_7"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+            <EditText
+                android:id="@+id/sudoku8_8"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:hint=""
+                android:textColor="#ffffff"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false" android:gravity="center"
+                android:focusableInTouchMode="false"/>
+
+        </GridLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="323dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/black"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="35dp" />
+
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:id="@+id/submit"
+        android:text="Submit"
+        android:onClick="check"
+        android:background="@drawable/background"/>
+
+
+
+</LinearLayout>
