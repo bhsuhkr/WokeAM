@@ -3,9 +3,7 @@ package com.example.bohyun.wokeam;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,18 +11,14 @@ import android.widget.Button;
 import android.widget.Toast;
 import java.io.OutputStream;
 import java.util.Set;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.UUID;
 
 public class TurnOffAlarmFragment extends android.support.v4.app.Fragment {
 
     Button turnoffBtn;
-
     int bluetooth = 1;
     String address = null;
     String name = null;
-
     BluetoothAdapter myBluetooth = null;
     BluetoothSocket btSocket = null;
     Set<BluetoothDevice> pairedDevices;
@@ -40,12 +34,10 @@ public class TurnOffAlarmFragment extends android.support.v4.app.Fragment {
                 turnoffBtn.setEnabled(false);
                 Toast.makeText(getActivity(), "Turning off the alarm...", Toast.LENGTH_LONG).show();
                 sendSignalToAlarmClock();
-
             }
         });
         return view;
     }
-
 
     public void sendSignalToAlarmClock(){
         try{
@@ -70,16 +62,11 @@ public class TurnOffAlarmFragment extends android.support.v4.app.Fragment {
             led_on_off("1");
             
             turnoffBtn.setEnabled(false);
-
-//            Intent i = new Intent(getActivity(), MainActivity.class);
-//            startActivity(i);
             getActivity().finish();
 
         } catch(Exception e) {
             Toast.makeText(getActivity(), "Bluetooth Fail, Try Again", Toast.LENGTH_SHORT).show();
         }
-
-
     }
 
     private void led_on_off(String i)
