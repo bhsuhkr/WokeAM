@@ -68,13 +68,5 @@
         </PreferenceScreen>
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="Other Preferences">
-        <CheckBoxPreference
-            android:key="bluetooth"
-            android:title="Bluetooth Auto Connection"
-            android:summary="Check it on, check it off"
-            />
-
-    </PreferenceCategory>
 
 </PreferenceScreen>

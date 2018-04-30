@@ -40,7 +40,7 @@ public class TurnOffAlarmFragment extends android.support.v4.app.Fragment {
                 turnoffBtn.setEnabled(false);
                 Toast.makeText(getActivity(), "Turning off the alarm...", Toast.LENGTH_LONG).show();
                 sendSignalToAlarmClock();
-                
+
             }
         });
         return view;
@@ -71,8 +71,9 @@ public class TurnOffAlarmFragment extends android.support.v4.app.Fragment {
             
             turnoffBtn.setEnabled(false);
 
-            Intent i = new Intent(getActivity(), MainActivity.class);
-            startActivity(i);
+//            Intent i = new Intent(getActivity(), MainActivity.class);
+//            startActivity(i);
+            getActivity().finish();
 
         } catch(Exception e) {
             Toast.makeText(getActivity(), "Bluetooth Fail, Try Again", Toast.LENGTH_SHORT).show();
