@@ -13,6 +13,7 @@
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"
                 />
 
             <ListPreference
@@ -22,6 +23,7 @@
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"
                 />
 
             <ListPreference
@@ -31,6 +33,7 @@
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"
                 />
 
             <ListPreference
@@ -40,7 +43,7 @@
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
-                />
+                android:defaultValue="None"/>
 
             <ListPreference
                 android:key="magicSquare"
@@ -49,6 +52,7 @@
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"
                 />
 
             <ListPreference
@@ -58,6 +62,7 @@
                 android:entries="@array/Difficulty"
                 android:entryValues="@array/Difficulty"
                 android:dialogTitle="Choose the difficulty level"
+                android:defaultValue="None"
                 />
 
         </PreferenceScreen>
